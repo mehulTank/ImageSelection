@@ -18,6 +18,17 @@
  <p>Select Image Dialog </p>
 
 <p>public void selectImage() {<br />
+ 
+// open camera 
+boolean isComprase = true;
+imageSelection.openCamera(isComprase);
+
+// open gallary 
+
+boolean isComprase = true;
+imageSelection.openGallery(isComprase);
+
+
 }</p>
  
 </p>
