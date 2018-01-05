@@ -9,10 +9,9 @@ import android.os.Bundle;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.ab.mehul.mylibrary.ImageSelection;
 import com.ab.mehul.mylibrary.interfaceImageResult.ImageResult;
@@ -21,7 +20,7 @@ import com.bumptech.glide.request.target.BitmapImageViewTarget;
 
 public class MainActivity extends AppCompatActivity implements ImageResult {
 
-    TextView textView;
+    Button btnSelectImage;
     ImageSelection imageSelection;
     ImageView imgDisplay;
 
@@ -32,11 +31,11 @@ public class MainActivity extends AppCompatActivity implements ImageResult {
         setContentView(R.layout.activity_main);
 
 
-        textView = (TextView) findViewById(R.id.tv1);
+        btnSelectImage = (Button) findViewById(R.id.btnSelect);
 
         imgDisplay = (ImageView) findViewById(R.id.imgDisplay);
 
-        textView.setOnClickListener(new View.OnClickListener() {
+        btnSelectImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 selectImage();
@@ -79,8 +78,6 @@ public class MainActivity extends AppCompatActivity implements ImageResult {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        Log.d("---- on activity result", "---- on activity result");
-
         imageSelection.imageProcessing(requestCode, resultCode, data);
 
 
@@ -89,8 +86,6 @@ public class MainActivity extends AppCompatActivity implements ImageResult {
 
     @Override
     public void imageUri(Uri uri) {
-
-        Log.d("---image uri", "" + uri);
 
         Glide.with(MainActivity.this).load(uri).asBitmap().centerCrop().into(new BitmapImageViewTarget(imgDisplay) {
             @Override
