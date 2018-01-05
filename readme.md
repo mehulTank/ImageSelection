@@ -14,6 +14,8 @@
  }</p>
 
 <p>
+ </br>
+<p>imageSelection = new ImageSelection(MainActivity.this);</p>
  
 <p>// open camera boolean isComprase = true; <br />
 imageSelection.openCamera(isComprase);</p>
@@ -21,5 +23,10 @@ imageSelection.openCamera(isComprase);</p>
 <p>// open gallary<br />
 boolean isComprase = true;<br />
 imageSelection.openGallery(isComprase);</p>
+
+
+<p>After that you need to implement ImageResult Interface.</p>
+
+<p>then after you get uri of the image in that method.</p>
  
 </p>
