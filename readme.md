@@ -28,5 +28,10 @@ imageSelection.openGallery(isComprase);</p>
 <p>After that you need to implement ImageResult Interface.</p>
 
 <p>then after you get uri of the image in that method.</p>
+
+
+<p>On Activity Result Call Image Processing method</p>
+
+<p> imageSelection.imageProcessing(requestCode, resultCode, data);</p>
  
 </p>
