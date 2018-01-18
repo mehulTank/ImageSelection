@@ -10,7 +10,7 @@
 <p>Step 2. Add the dependency</p>
 
 <p> dependencies {<br />
- compile 'com.github.mehulTank:ImageSelection:V.2.0'<br />
+   compile 'com.github.mehulTank:ImageSelection:V.3.0'<br />
  }</p>
 
 <p>
